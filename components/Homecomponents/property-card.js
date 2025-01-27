@@ -33,7 +33,6 @@ export function PropertyCard({
   return (
     <Card className="group relative overflow-hidden rounded-xl border-0 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 hover:shadow-[0_8px_40px_rgb(0,0,0,0.16)]">
       <div className="relative">
-        {/* Image Carousel */}
         <div className="relative aspect-[4/3] overflow-hidden">
           <img
             src={
