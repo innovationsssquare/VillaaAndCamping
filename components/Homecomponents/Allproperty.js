@@ -3,12 +3,12 @@ import { PropertyCard } from "@/components/Homecomponents/property-card";
 
 const Allproperty = () => {
   return (
-    <div className="min-h-screen bg-gray-50/50 p-8">
-      <div className="container mx-auto">
-        <h2 className="mb-8 text-2xl font-semibold text-gray-900">
+    <div className="min-h-screen bg-gray-50/50 px-4 py-8">
+      <div className="w-full px-4 mx-auto">
+      <h2 className="text-4xl font-semibold text-gray-800 mb-8">
           Featured Properties
         </h2>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
           <PropertyCard
             title="A Container Stay in Mulshi"
             location="Mulshi, Pune"
@@ -18,7 +18,7 @@ const Allproperty = () => {
             description="AC Stay with Swimming Pool, Spa, Restaurant, Meals and more"
             priceSubtext="/Person"
             images={Array(5).fill(
-              "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ilRfjhEw67GdJ0qYULC5QhgqQEiFB4.png"
+            "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80"
             )}
             includedMeals="Breakfast Included"
             amenities={["Swimming Pool", "Spa", "Restaurant"]}

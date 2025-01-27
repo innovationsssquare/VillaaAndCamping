@@ -37,7 +37,8 @@ export function PropertyCard({
           <img
             src={
               images[currentImageIndex] ||
-              "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ilRfjhEw67GdJ0qYULC5QhgqQEiFB4.png"
+              "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80"
+
             }
             alt={title}
             fill="true"

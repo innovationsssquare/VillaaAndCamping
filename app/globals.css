@@ -3,3 +3,15 @@
 @tailwind utilities;
 
 
+@keyframes zoomIn {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  
+  .animate-zoom-in {
+    animation: zoomIn 8s ease-in-out forwards;
+  }

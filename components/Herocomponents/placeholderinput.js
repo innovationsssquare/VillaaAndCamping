@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion"
 import { useCallback, useEffect, useRef, useState } from "react"
 import { cn } from "@/lib/utils"
+import { BorderBeam } from "@/components/ui/border-beam";
 
 export function PlaceholdersAndVanishInput({
   placeholders,
@@ -15,7 +16,7 @@ export function PlaceholdersAndVanishInput({
   const startAnimation = () => {
     intervalRef.current = setInterval(() => {
       setCurrentPlaceholder((prev) => (prev + 1) % placeholders.length)
-    }, 3000)
+    }, 4000)
   }
   const handleVisibilityChange = () => {
     if (document.visibilityState !== "visible" && intervalRef.current) {
@@ -161,7 +162,7 @@ export function PlaceholdersAndVanishInput({
   return (
     <form
       className={cn(
-        "w-full relative max-w-xl mx-auto bg-white/10 dark:bg-zinc-800/10 h-12 rounded-full overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200 backdrop-blur-md",
+        "w-full relative max-w-2xl mx-auto bg-white/10 dark:bg-zinc-800/10 h-14 rounded-full overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200 backdrop-blur-md",
         value && "bg-white/20 dark:bg-zinc-800/20",
       )}
       onSubmit={handleSubmit}

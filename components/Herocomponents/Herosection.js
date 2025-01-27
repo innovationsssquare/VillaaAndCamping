@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { PlaceholdersAndVanishInput } from "@/components/Herocomponents/placeholderinput";
 import { WordRotate } from "@/components/ui/word-rotate";
 import React from 'react'
+import AnimatedBackground from "./AnimatedBackground";
 
 const Herosection = () => {
     const handleSearchChange = (e) => {
-        // Handle search input change
         console.log("Search changed:", e.target.value);
       };
     
@@ -16,10 +16,22 @@ const Herosection = () => {
         e.preventDefault();
         console.log("Search submitted");
       };
+
+      const images = [
+        process.env.NEXT_PUBLIC_IMAGE_URL || "https://historywithtravel.com/images/Lonavala/lonavala-demography.jpg",
+        "https://th.bing.com/th/id/OIP.t46x1nBkvddK3X3Xfs0QeAAAAA?rs=1&pid=ImgDetMain",
+        "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80",
+        "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80",
+        "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80",
+      ]
+
+
+
+
   return (
     <div className="min-h-screen relative bg-black">
     {/* Background Image with Overlay */}
-    <div
+    {/* <div
       className="absolute inset-0 z-0"
       style={{
         backgroundImage: `url(${
@@ -31,8 +43,8 @@ const Herosection = () => {
       }}
     >
       <div className="absolute inset-0 bg-black/40" />
-    </div>
-
+    </div> */}
+    <AnimatedBackground images={images} interval={5000} />
     {/* Content */}
     <div className="relative z-10">
       {/* Navigation */}
@@ -57,20 +69,6 @@ const Herosection = () => {
 
       {/* Hero Content */}
       <div className="mx-auto max-w-6xl px-6 py-24 lg:py-32 text-center">
-        {/* Animated Logo
-        <motion.div
-          initial={{ scale: 0.5, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{
-            duration: 0.8,
-            ease: [0.16, 1, 0.3, 1],
-          }}
-          className="mx-auto mb-12 w-24 h-24 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center"
-        >
-          <div className="w-16 h-16 rounded-full bg-white/20" />
-        </motion.div> */}
-
-        {/* Animated Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

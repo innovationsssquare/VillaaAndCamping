@@ -44,7 +44,7 @@ const destinations = [
 
 export default function DestinationsCarousel() {
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-8">
+    <div className="w-full  mx-auto px-4 py-8">
       <h2 className="text-4xl font-semibold text-gray-800 mb-8">
         Nearby popular destinations
       </h2>
@@ -54,19 +54,19 @@ export default function DestinationsCarousel() {
             align: "start",
             loop: true,
           }}
-          className="w-full"
+          className="w-11/12 mx-auto"
         >
           <CarouselContent className="-ml-2 md:-ml-4">
             {destinations.map((destination, index) => (
               <CarouselItem
                 key={index}
-                className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3"
+                className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/4"
               >
                 <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-                  <Image
+                  <img
                     src={destination.image || "/placeholder.svg"}
                     alt={destination.name}
-                    fill
+                    fill="true"
                     className="object-cover transition-transform hover:scale-105 duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60" />
